@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #030e62, #4285f4);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            font-size: 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .about,
+        .projects,
+        .services,
+        .contact {
+            margin-bottom: 2rem;
+        }
+
+        .aboutme {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .about h2,
+        .projects h2,
+        .services h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #030e62;
+        }
+
+        .maincontent {
+            max-width: 600px;
+        }
+
+        .about p {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.9rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-img {
+            border-radius: 10%;
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            animation: fade 3s infinite;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .projects {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .projects .project {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .project-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: center;
+            padding: 1rem;
+
+        }
+
+        .projects .project .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .services {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .services .service {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .service-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: #3b82f6;
+            margin-bottom: 1rem;
+            background: #e0f2fe;
+            padding: 1rem;
+            border-radius: 50%;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .service-card i:hover {
+            background: #3b82f6;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .contact {
+            background-color: #1e1e2f;
+            color: white;
+        }
+
+        .contact h2 {
+            text-align: center;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 0.4rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            outline: none;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(79deg, #4facfe, #00f2fe);
+        }
+
+        .contact p {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-bottom: 9px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            border-radius: 9px;
+            cursor: pointer;
+            background-color: #030e62;
+            color: white;
+        }
+
+        button:hover {
+            background: linear-gradient(120deg, #ff512f, #ff512f);
+            color: rgb(8, 8, 8);
+        }
+
+        footer {
+            background-color: #0e0d0d;
+            color: #046118;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+            text-align: center;
+        }
+        @media (max-width:480px){
+            header h1{
+                font-size: 1.2rem;
+            }
+            header p{
+                font-size: 0.9rem;
+            }
+            .about p{
+                font: size 0.9rem;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Mansh Online</h1>
+        <p>We transform raw data into insights, build professional websites, and design visuals that inspire action.
+
+        </p>
+    </header>
+    <div class="container">
+        <section class="about">
+            <h2>About Me</h2>
+            <div class="aboutme">
+                <img src="https://images.pexels.com/photos/30004312/pexels-photo-30004312.jpeg" class="about-img">
+                <div class="maincontent">
+                    <p>Hi, I’m John, the founder of Mansh Online.
+                        I’m passionate about combining data, technology, and design to create solutions that drive
+                        growth.
+                    </p>
+                    <p>With Data Analysis, I help businesses unlock hidden opportunities through dashboards and
+                        reports.
+
+                        With WordPress Development, I build modern, responsive, and user-friendly websites tailored
+                        to your goals.
+
+                        With Canva Design, I craft impactful visuals that capture attention on both digital and
+                        print platforms.
+
+                        At Mansh Online, I believe in clarity, creativity, and results — helping individuals,
+                        startups, and businesses shine in the digital space.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="projects">
+            <h2>View my projects here</h2>
+            <div class="project">
+                <div class="project-card">
+                    <img src="https://images.pexels.com/photos/5816298/pexels-photo-5816298.jpeg">
+                    <h2>Data Analysis Projects</h2>
+                    <p>
+                        Sales Growth Dashboard: Built in Power BI to monitor sales KPIs.
+
+                        Customer Behavior Report: Analytics on customer demographics and purchase trends
+                    </p>
+                </div>
+
+
+                <div class="project-card">
+                    <img src="https://images.pexels.com/photos/6214470/pexels-photo-6214470.jpeg">
+                    <h2>WordPress Websites</h2>
+                    <p>
+                        Local Business Website: Simple, clean, and mobile-friendly.
+
+                        Personal Portfolio: Minimalist design with blog integration.
+
+                        E-commerce Store: WooCommerce setup for online sales.
+                    </p>
+                </div>
+
+
+                <div class="project-card">
+                    <img src="https://images.pexels.com/photos/5082237/pexels-photo-5082237.jpeg">
+                    <h2>Canva Designs</h2>
+                    <p>
+                        Instagram Campaign: Branded social media posts for a fashion store.
+
+                        Event Flyers: Bold, creative layouts for events and promotions.
+
+                        Corporate Identity: Business card and flyer set for a startup.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <section class="services">
+            <h2>Services</h2>
+            <div class="service">
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h2>Data Analysis</h2>
+                    <p>Data cleaning, visualization, and dashboard creation.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h2>WordPress Website Design</h2>
+                    <p>Responsive websites, e-commerce, and SEO setup.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h2>Graphic Design (Canva)</h2>
+                    <p>Social media graphics, flyers, business cards, and branding.</p>
+                </div>
+            </div>
+        </section>
+        <div class="contact">
+            <h2>Let’s Connect</h2>
+            <p>
+                Got a project? Let’s bring it to life — contact me today.
+            </p>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+
+                <textarea rows="5" placeholder="Your Message">
+
+                    </textarea>
+                <button type="submit"> Send Message</button>
+
+            </form>
+        </div>
+        <footer>
+            &copy; 2025 Mansh Online. All Rights Reserved.
+        </footer>
+    </div>
+
+</body>
+
+</html>
